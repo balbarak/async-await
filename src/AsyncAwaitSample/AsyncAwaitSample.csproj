@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\TextBoxTraceListener.cs" />
     <Compile Include="Models\WebResult.cs" />
     <Compile Include="Services\DataService.cs" />
     <Page Include="MainWindow.xaml">
