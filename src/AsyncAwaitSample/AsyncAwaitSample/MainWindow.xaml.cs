@@ -1,4 +1,5 @@
-﻿using AsyncAwaitSample.Services;
+﻿using AsyncAwaitSample.Models;
+using AsyncAwaitSample.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace AsyncAwaitSample
         public MainWindow()
         {
             InitializeComponent();
+
+            listBox.ItemsSource = WebResult.CreateSample();
         }
 
         private void OnGetDataWithTaskClicked(object sender, RoutedEventArgs e)
