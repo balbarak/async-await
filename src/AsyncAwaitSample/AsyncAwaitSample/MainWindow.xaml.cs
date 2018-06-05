@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AsyncAwaitSample.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,16 @@ namespace AsyncAwaitSample
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OnGetDataWithTaskClicked(object sender, RoutedEventArgs e)
+        {
+            var task = DataService.Instance.GetData("http://www.yahoo.com");
+
+            task.ContinueWith(prevTask =>
+            {
+                var re = prevTask.Result;
+            });
         }
     }
 }
